@@ -69,4 +69,49 @@ public class box {
         // removing item from box
         boxes.get(boxNumber).remove(itemName);
     }
+    // searching for an item in all boxes
+    public static void searchForItem() {
+        // getting item name from user
+        System.out.println("What item would you like to search for?");
+        // scanning for user input
+        Scanner scan = new Scanner(System.in);
+        String itemName = scan.next();
+        // searching for item in all boxes
+        for (int i = 0; i < boxes.size(); i++) {
+            if (boxes.get(i).contains(itemName)) {
+                System.out.println("Item found in box " + i);
+            }
+        }
+    }
+    // get all item count in all boxes
+    public static void getAllItemCount() {
+        // creating variable to store item count
+        int itemCount = 0;
+        // looping through all boxes
+        for (int i = 0; i < boxes.size(); i++) {
+            // adding item count to variable
+            itemCount += boxes.get(i).size();
+        }
+        // printing out item count
+        System.out.println("There are " + itemCount + " items in all boxes");
+    }
+    // updating an item in a box
+    public static void updateItemInBox() {
+        // getting box number from user
+        System.out.println("What box would you like to update an item in?");
+        // scanning for user input
+        Scanner scan = new Scanner(System.in);
+        int boxNumber = scan.nextInt();
+        // getting item name from user
+        System.out.println("What item would you like to update?");
+        // taking user input as a string
+        String itemName = scan.next();
+        // getting new item name from user
+        System.out.println("What would you like to update the item to?");
+        // taking user input as a string
+        String newItemName = scan.next();
+        // updating item in box
+        boxes.get(boxNumber).set(boxes.get(boxNumber).indexOf(itemName), newItemName);
+    }
+
 }

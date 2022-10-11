@@ -68,6 +68,32 @@ public class Main {
                     box.removeItemFromBox();
                     System.out.println("-------------------------------------------------------");
                     break;
+                case 7:
+                    System.out.println("-------------------------------------------------------");
+                    box.displayAllBoxes();
+                    // searching for item
+                    box.searchForItem();
+                    System.out.println("-------------------------------------------------------");
+                    break;
+                case 8:
+                    System.out.println("-------------------------------------------------------");
+                    box.displayAllBoxes();
+                    // getting item count
+                    box.getAllItemCount();
+                    System.out.println("-------------------------------------------------------");
+                    break;
+                case 9:
+                    System.out.println("-------------------------------------------------------");
+                    box.displayAllBoxes();
+                    // updating item in box
+                    box.updateItemInBox();
+                    System.out.println("-------------------------------------------------------");
+                    break;
+                case 10:
+                    System.out.println("-------------------------------------------------------");
+                    System.out.println("Exiting...");
+                    System.out.println("-------------------------------------------------------");
+                    break;
                 default:
                     // if user enters invalid input
                     System.out.println("Invalid input");
