@@ -77,10 +77,15 @@ public class box {
         Scanner scan = new Scanner(System.in);
         String itemName = scan.next();
         // searching for item in all boxes
+        int x = 0;
         for (int i = 0; i < boxes.size(); i++) {
             if (boxes.get(i).contains(itemName)) {
                 System.out.println("Item found in box " + i);
+                x++;
             }
+        }
+        if (x == 0) {
+            System.out.println("Item not found");
         }
     }
     // get all item count in all boxes

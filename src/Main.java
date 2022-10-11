@@ -77,7 +77,6 @@ public class Main {
                     break;
                 case 8:
                     System.out.println("-------------------------------------------------------");
-                    box.displayAllBoxes();
                     // getting item count
                     box.getAllItemCount();
                     System.out.println("-------------------------------------------------------");
